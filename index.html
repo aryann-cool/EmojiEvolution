@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Evolution Game</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+        {
+            "imports": {}
+        }
+    </script>
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Emoji Evolution</h1>
+            <div id="settings-btn">⚙️</div>
+            <div id="stats">
+                <div id="level">Level: 1</div>
+                <div id="score">Score: 0</div>
+            </div>
+        </header>
+        
+        <div id="emoji-container">
+            <div id="current-emoji">🥚</div>
+            <div id="tap-instruction">Tap to evolve!</div>
+        </div>
+        
+        <div id="progress-container">
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <div id="evolution-path"></div>
+        </div>
+        
+        <div id="upgrades-container">
+            <h2>Upgrades</h2>
+            <div id="upgrades-list"></div>
+        </div>
+        
+        <div id="achievements-container">
+            <h2>Achievements</h2>
+            <div id="achievements-list"></div>
+        </div>
+        
+        <div id="share-container">
+            <button id="share-btn">Share Your Evolution</button>
+        </div>
+        
+        <div id="community-container">
+            <h2>Community Evolutions</h2>
+            <div id="community-posts"></div>
+            <button id="load-more-btn">Load More</button>
+        </div>
+    </div>
+
+    <div id="evolution-modal" class="modal">
+        <div class="modal-content">
+            <h2>You evolved!</h2>
+            <div id="evolution-animation">
+                <div id="old-emoji"></div>
+                <div id="arrow">➡️</div>
+                <div id="new-emoji"></div>
+            </div>
+            <h3 id="evolution-message"></h3>
+            <button id="continue-btn">Continue</button>
+        </div>
+    </div>
+
+    <div id="share-modal" class="modal">
+        <div class="modal-content">
+            <h2>Share Your Progress</h2>
+            <div id="share-stats">
+                <p>Level: <span id="share-level"></span></p>
+                <p>Score: <span id="share-score"></span></p>
+                <p>Taps: <span id="share-taps"></span></p>
+                <p>Current Form: <span id="share-emoji"></span></p>
+                <p>Path: <span id="share-path"></span></p>
+            </div>
+            <div id="share-image-container">
+                <div id="share-image">
+                    <h3>Emoji Evolution</h3>
+                    <div id="share-emoji-display"></div>
+                    <p id="share-caption"></p>
+                </div>
+            </div>
+            <button id="download-btn">Share to Community</button>
+            <button id="close-share-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h2>Settings</h2>
+            <div class="settings-options">
+                <div class="setting-item">
+                    <label for="sound-toggle">Sounds</label>
+                    <label class="switch">
+                        <input type="checkbox" id="sound-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="particle-toggle">Particle Effects</label>
+                    <label class="switch">
+                        <input type="checkbox" id="particle-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <button id="close-settings-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="game.js" type="module"></script>
+</body>
+</html>
