@@ -174,9 +174,6 @@ function init() {
     // Set up upgrades
     initUpgrades();
     
-    // Initialize WebsimSocket for database
-    window.room = new WebsimSocket();
-    
     // Get username if available
     getUsername();
     
@@ -1216,4 +1213,9 @@ window.addEventListener('DOMContentLoaded', () => {
             description: 'Tap the emoji to begin your evolution journey!'
         });
     }, 1000);
+});
+
+document.getElementById("continue-btn").addEventListener("click", () => {
+    document.getElementById("evolution-modal").style.display = "none";
+    // Optionally add logic to resume game or trigger next step
 });
