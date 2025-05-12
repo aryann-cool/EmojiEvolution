@@ -1217,14 +1217,3 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }, 1000);
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const emojiElement = document.getElementById("current-emoji");
-    console.log("Emoji element:", emojiElement); // Debug line
-
-    if (emojiElement) {
-        emojiElement.addEventListener("click", handleTap);
-    } else {
-        console.error("❌ #current-emoji not found in DOM.");
-    }
-});
